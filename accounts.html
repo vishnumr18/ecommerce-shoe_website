@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="image/icons.png" />
+    <title>Account - INSOLE</title>
+    <link rel="stylesheet" href="login.css" />
+    <link
+      rel="stylesheet"
+      <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- navigation bar start -->
+    <div class="main">
+      <div class="navbar">
+        <div class="logo">
+          <img src="image/logo.png" alt="logo " width="70px" />
+        </div>
+        <nav>
+          <ul class="nav_link">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="men.html">Men</a></li>
+            <li><a href="womens.html">Women</a></li>
+            <li><a href="kids.html">Kids</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- navigation bar end -->
+
+    <!-- account page start -->
+    <div class="accounts-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <img src="image/Computer login-cuate.png" width="100%" />
+          </div>
+          <div class="col-2">
+            <div class="form-container">
+              <div class="form-btn">
+                <span onclick="login()">Login</span>
+                <span onclick="register()">Register</span>
+                <hr id="indicator" />
+
+                <form id="login-form">
+                  <input type="text" placeholder="User Name" />
+                  <input type="password" placeholder="Password" />
+                  <button type="submit" class="btn">Login</button>
+                  <a href="">Forgot Password?</a>
+                </form>
+
+                <form id="submit-to-google-sheet">
+                  <input
+                    type="text"
+                    name="Name"
+                    placeholder="User Name"
+                    required
+                  />
+                  <input
+                    type="email"
+                    name="Email"
+                    placeholder="Your Email"
+                    required
+                  />
+                  <input type="password" placeholder="Password" />
+                  <button type="submit" class="btn">Register</button>
+                  <a href="">Register as a seller</a>
+                </form>
+                <span id="msg" class="after"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- account page end -->
+
+    <!-- footer start  -->
+    <div class="footer">
+      <div class="social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <ul class="list">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Terms & conditions</a>
+        </li>
+        <li>
+          <a href="#">Privacy Policy</a>
+        </li>
+      </ul>
+      <hr />
+      <p class="copyright">©️2022 Insole</p>
+    </div>
+    <!-- footer end -->
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbwNAxS04JQ3X36WookgDciXKVfjRv7Fk7WYyZQTaxiGzT37CMey2lBCb4U2r7_MJCU-cw/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Thank You For Registering!!";
+            setTimeout(function () {
+              msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+  </body>
+</html>
+
+<!--  login page js start -->
+<script>
+  var LoginForm = document.getElementById("login-form");
+  var RegForm = document.getElementById("submit-to-google-sheet");
+  var Indicator = document.getElementById("indicator");
+  function register() {
+    RegForm.style.transform = "translateX(0px)";
+    LoginForm.style.transform = "translateX(0px)";
+    Indicator.style.transform = "translateX(100px)";
+  }
+  function login() {
+    RegForm.style.transform = "translateX(300px)";
+    LoginForm.style.transform = "translateX(300px)";
+    Indicator.style.transform = "translateX(0px)";
+  }
+</script>
+<!--  login page js end -->

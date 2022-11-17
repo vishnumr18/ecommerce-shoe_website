@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* navigation bar start */
+.navbar {
+  background: #eeddcd;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  color: saddlebrown;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+}
+.navbar .logo {
+  cursor: pointer;
+}
+.navbar ul li {
+  display: inline-block;
+  list-style: none;
+}
+.navbar ul li a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  color: #622e08;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 25px;
+}
+.navbar ul li a:hover {
+  color: #aa612d;
+}
+
+/* navigation bar end */
+/* -------- login section start--------- */
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.clo-2 {
+  flex-basis: 50%;
+  min-width: 300px;
+  border-radius: 6px;
+}
+.col-2 img {
+  max-width: 100%;
+  width: 450px;
+  height: 600px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+.col-2 h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  line-height: 60px;
+  color: #34251f;
+  margin: 25px 0;
+}
+.col-2 p {
+  font-family: "Lato", sans-serif;
+  color: #34251f;
+}
+.col-2 small {
+  font-family: "Lato", sans-serif;
+  color: #34251f;
+}
+.btn {
+  display: inline-block;
+  background: #34251f;
+  color: aliceblue;
+  padding: 8px 30px;
+  margin: 30px 0;
+  border-radius: 30px;
+  text-decoration: none;
+}
+.btn:hover {
+  background: #552706;
+}
+.accounts-page {
+  padding: 0;
+  background: linear-gradient(
+    165deg,
+    #eeddcd 40%,
+    #d4aa84d9,
+    #fadabe,
+    #eeccadd9
+  );
+}
+
+.form-container {
+  background: white;
+  width: 300px;
+  height: 400px;
+  position: relative;
+  text-align: center;
+  padding: 20px 0;
+  margin: auto;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.form-container span {
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0 10px;
+  color: #552706;
+  cursor: pointer;
+  width: 100px;
+  display: inline-block;
+}
+.form-btn {
+  display: inline-block;
+}
+.form-container form {
+  max-width: 300px;
+  padding: 0 20px;
+  position: absolute;
+  top: 130px;
+  transition: transform 1s;
+}
+
+form input {
+  width: 100%;
+  height: 30px;
+  background: none;
+  margin: 10px 0;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+}
+form .btn {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  margin: 10px 0;
+}
+form .btn:focus {
+  outline: none;
+}
+#login-form {
+  left: -300px;
+}
+#submit-to-google-sheet {
+  left: 0;
+}
+form a {
+  font-size: 12px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  color: #622e08;
+}
+#indicator {
+  width: 100px;
+  border: none;
+  background: #ff523b;
+  height: 3px;
+  margin-top: 8px;
+  transform: translateX(100px);
+  transition: transform 1s;
+}
+
+.after {
+  margin-top: 24px;
+  font-size: 10px;
+  display: block;
+}
+
+/* -------- login section end--------- */
+
+/* -------------footer start------------- */
+.footer {
+  padding: 40px 0;
+  background: rgb(82, 52, 33);
+}
+
+.footer .social {
+  text-align: center;
+  padding-bottom: 25px;
+  color: #7d7f81;
+}
+.footer .social a {
+  font-size: 24px;
+  color: white;
+  border: 1px solid rgb(83, 81, 81);
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 8px;
+  opacity: 0.75;
+}
+.footer .social a:hover {
+  opacity: 0.9;
+}
+.footer ul {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+}
+.footer ul li a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+}
+.footer ul li {
+  display: inline-block;
+  padding: 0 15px;
+}
+.footer ul li :hover {
+  opacity: 1;
+}
+.footer .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: rgb(130, 130, 130);
+}
+.footer hr {
+  margin: 10px 70px;
+  padding: 10px 70px auto;
+  opacity: 0.5;
+}
+/* -------------footer end------------- */

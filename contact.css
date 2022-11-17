@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #eeddcd;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+}
+.container {
+  width: 80%;
+  margin: 50px auto;
+  color: #513418;
+}
+.contact_box {
+  background: #fff;
+  display: flex;
+}
+.contact_left {
+  flex-basis: 60%;
+  padding: 40px 60px;
+}
+.contact_right {
+  flex-basis: 30%;
+  padding: 40px;
+  background: #6b3707;
+  color: #fff;
+}
+h1 {
+  margin-bottom: 10px;
+}
+
+.container p {
+  margin-bottom: 40px;
+}
+.input_row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.input_row .input_group {
+  flex-basis: 45%;
+}
+input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  padding-bottom: 5px;
+}
+textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  outline: none;
+
+  padding: 10px;
+  box-sizing: border-box;
+}
+label {
+  margin-bottom: 6px;
+  display: block;
+  color: #6b3707;
+}
+button {
+  background: #6b3707;
+  width: 100px;
+  border: none;
+  outline: none;
+  color: #fff;
+  height: 35px;
+  border-radius: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.6s;
+}
+button:hover {
+  background: #ab6019;
+  box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
+}
+.contact_left h3 {
+  color: #6b3707;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.contact_right h3 {
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+tr td:first-child {
+  padding-right: 20px;
+}
+tr td {
+  padding-top: 20px;
+}
